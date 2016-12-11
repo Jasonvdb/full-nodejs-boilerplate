@@ -33,7 +33,9 @@ function createConfig(isDebug) {
 	let publicPath = "/build";
 
 	if (isDebug) {
-
+		plugins.push(new webpack.HotModuleReplacementPlugin());
+		clientEntry.unshift("webpack-dev-server/client?http://localhost:8080/", "webpack/hot/only-dev-server");
+		publicPath = "http://localhost:8080/build/";
 	} else {
 		//Production build
 		plugins.push(

@@ -1,2 +1,2 @@
 import './client.scss';
-console.log("Hello from client");
+console.log("Hello from client!");
