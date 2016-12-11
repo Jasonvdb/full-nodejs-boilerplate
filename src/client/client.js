@@ -1,2 +1,8 @@
 import './client.scss';
-console.log("Hello from client!");
+
+import React from "react";
+import ReactDOM from "react-dom";
+
+import AppContainer from "./components/app";
+
+ReactDOM.render(<AppContainer />, document.getElementById("mount"));
