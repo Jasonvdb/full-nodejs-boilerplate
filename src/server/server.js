@@ -1,6 +1,5 @@
 import express from "express";
 import http from "http";
-
 import {isDevelopment} from "./settings";
 
 // ----------------------
