@@ -35,7 +35,15 @@ function createConfig(isDebug) {
 	if (isDebug) {
 
 	} else {
+		//Production build
+		plugins.push(
+			new webpack.optimize.DedupePlugin(),
+			new ExtractTextPlugin("[name].css"),
+			new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}})
+		);
 
+		loaders.css.loader = ExtractTextPlugin.extract("style", "css");
+		loaders.sass.loader = ExtractTextPlugin.extract("style", "css!sass");
 	}
 
 	return {
