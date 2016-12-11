@@ -32,6 +32,8 @@
     "gulp-load-plugins": "^1.4.0",
     "gulp-nodemon": "^2.2.1",
     "gulp-sourcemaps": "^1.9.1",
+    "gulp-util": "^3.0.7",
+    "jasmine": "^2.5.2",
     "rimraf": "^2.5.4",
     "source-map-support": "^0.4.6"
   },
