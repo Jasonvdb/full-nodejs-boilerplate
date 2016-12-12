@@ -36,7 +36,10 @@ function createConfig(isDebug) {
 
 	if (isDebug) {
 		plugins.push(new webpack.HotModuleReplacementPlugin());
-		clientEntry.unshift("webpack-dev-server/client?http://localhost:8080/", "webpack/hot/only-dev-server");
+		clientEntry.unshift(
+			"webpack-dev-server/client?http://localhost:8080/",
+			"react-hot-loader/patch",
+			"webpack/hot/only-dev-server");
 		publicPath = "http://localhost:8080/build/";
 	} else {
 		//Production build
